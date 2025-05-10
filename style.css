@@ -1,0 +1,190 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+}
+.heading{
+  text-align: center;
+  margin-top: 50px;
+}
+.upperContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 2% 0;
+}
+.balance{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 1% 0;
+}
+#balance{
+  font-size: 50px;
+  margin: 10px 0;
+}
+.addIncomeBtn{
+  margin: 10px 0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #000; 
+  color: #fff;
+  cursor: pointer;
+}
+.unhideOnAddIncomeClick{
+  display: none;
+}
+input{
+  margin: 10px 0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  /* border: none; */
+}
+#add{
+  margin: 10px 0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #000; 
+  color: #fff;
+  cursor: pointer;
+}
+
+.expense{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 1% 0;
+}
+.unhideOnAddExpenseClick{
+  display: none;
+}
+.addExpenseBtn{
+  margin: 10px 0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #000; 
+  color: #fff;
+  cursor: pointer;
+}
+input{
+  margin: 10px 0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  /* border: none; */
+}
+select{
+  margin: 10px 0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  /* border: none; */
+}
+option{
+  margin: 10px 0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  /* border: none; */
+}
+#addExpense{
+  margin: 10px 0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #000; 
+  color: #fff;
+  cursor: pointer;
+}
+/* Lower Container Styles */
+.lowerContainer {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.lowerContainer h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.expenseList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.expenseList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  margin-bottom: 12px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  border-left: 4px solid #ff4757;
+}
+
+/* This creates space between amount and category */
+.expenseList li span:first-child {
+  display: flex;
+  gap: 10px; /* Space between amount and category */
+  margin-right: 20px; /* Space before delete button */
+}
+
+/* This creates space between category and delete button */
+.expenseList li span:last-child {
+  margin-left: auto; /* Pushes delete button to far right */
+  padding-left: 20px; /* Additional space before delete */
+}
+
+.delete {
+  color: #ff4757;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.delete:hover {
+  background: #ff4757;
+  color: white;
+}
+
+/* Category colors */
+.expenseList li[data-category="Food"] { border-left-color: #ffa502; }
+.expenseList li[data-category="Travel"] { border-left-color: #1e90ff; }
+.expenseList li[data-category="Clothing"] { border-left-color: #ff6b81; }
+.expenseList li[data-category="Utilities"] { border-left-color: #2f3542; }
+.expenseList li[data-category="Entertainment"] { border-left-color: #9c88ff; }
+.expenseList li[data-category="Other"] { border-left-color: #7f8c8d; }
+
+/* Empty state */
+.expenseList:empty::after {
+  content: "No expenses added yet";
+  display: block;
+  text-align: center;
+  color: #95a5a6;
+  padding: 20px 0;
+  font-style: italic;
+}
+
+.btnDiv{
+  display: flex;
+  align-content: inherit;
+  justify-content: center;
+  gap: 12px;
+}
